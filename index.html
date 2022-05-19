@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="conteiner">
-        <form class="form form--hidden" id="login">
+        <form class="form" id="login">
             <h1 class="form__title">Авторизация</h1>
             <div class="form__message form__message--error"></div>
 
@@ -34,11 +34,11 @@
             </p>
         </form>
 
-        <form class="form" id="createAccount">
+        <form class="form form--hidden" id="createAccount">
             <h1 class="form__title">Создать аккаунт</h1>
             <div class="form__message form__message--error"></div>
             <div class="form__input-group">
-                <input type="text" class="form__input" autofocus placeholder="Логин">
+                <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Логин">
                 <div class="form__input-error-message"></div>
             </div>
 
