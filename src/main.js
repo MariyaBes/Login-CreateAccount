@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll(".form__input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
-            if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 6) {
-                setInputError(inputElement, "Username должно содержать не менее 6 символов");
+            if (e.target.id === "signupPassword" && e.target.value.length > 0 && e.target.value.length < 6) {
+                setInputError(inputElement, "Пароль должен содержать не менее 6 символов");
             }
         });
 
