@@ -1,130 +1,204 @@
-
-.form-control:focus {
-    box-shadow: none;
-    border-color: #BA68C8
-}
-
-.profile-button {
-    background: rgb(99, 39, 120);
-    box-shadow: none;
-    border: none
-}
-
-.profile-button:hover {
-    background: #682773
-}
-
-.profile-button:focus {
-    background: #682773;
-    box-shadow: none
-}
-
-.profile-button:active {
-    background: #682773;
-    box-shadow: none
-}
-
-.back:hover {
-    color: #682773;
-    cursor: pointer
-}
-
-.labels {
-    font-size: 11px
-}
-
-.add-experience:hover {
-    background: #BA68C8;
-    color: #fff;
-    cursor: pointer;
-    border: solid 1px #BA68C8
-}
-
-.img {
-    border-radius: 10px;
-}
- 
-
 @import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 main {
-    min-height: 100vh;
-    background: #fff;
+  min-height: 100vh;
+  background: #fff;
 }
 
 .navigator {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    bottom: 20px;
-    width: 300px;
-    border-radius: 10px;
-    box-sizing: initial;
-    border-left: 5px solid #4d5df9;
-    background: #4d5df9;
-    transition: width 0,5s;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  width: 70px;
+  border-radius: 10px;
+  box-sizing: initial;
+  border-left: 5px solid #4d5df9;
+  background: #4d5df9;
+  transition: 1s;
+  overflow-x: hidden;
 }
 
+.navigator.active {
+  transition: 1s;
+  width: 300px;
+}
+
+
 .navigator ul {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding-left: 5px;
-    padding-top: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 40px;
 }
 
 .navigator ul li {
-    position: relative;
-    list-style: none;
-    width: 100%;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .navigator ul li.active {
-    background: #fff;
+  background: #fff;
+}
+
+.navigator ul li b:nth-child(1) {
+  position: absolute;
+  top: -20px;
+  height: 20px;
+  width: 100%;
+  background: #fff;
+  display: none;
+}
+
+.navigator ul li b:nth-child(1)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom-right-radius: 20px;
+  background: #4d5df9;
+}
+
+.navigator ul li b:nth-child(2) {
+  position: absolute;
+  bottom: -20px;
+  height: 20px;
+  width: 100%;
+  background: #fff;
+  display: none;
+}
+
+.navigator ul li b:nth-child(2)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 20px;
+  background: #4d5df9;
+}
+
+.navigator ul li.active b:nth-child(1), 
+.navigator ul li.active b:nth-child(2) {
+  display: block;
 }
 
 .navigator ul li a {
-    position: relative;
-    display: block;
-    width: 100%;
-    display: flex;
-    text-decoration: none;
-    color: #fff;
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: #fff;
 }
 
 .navigator ul li.active a {
-    color: #333;
+  color: #333;
 }
 
 .navigator ul li a .icon {
-    position: relative;
-    display: block;
-    min-width: 60px;
-    height: 60px;
-    line-height: 70px;
-    text-align: center;
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 70px;
+  text-align: center;
+  bottom: 2px;
 }
 
 .navigator ul li a .icon i {
-    font-size: 130%;
-    text-align: center;
+  font-size: 130%;
+  text-align: center;
 }
 
 .navigator ul li a .title {
-    position: relative;
-    display: block;
-    padding-left: 10px;
-    height: 60px;
-    line-height: 60px;
-    white-space: normal;
+  position: relative;
+  display: block;
+  padding-left: 10px;
+  height: 60px;
+  line-height: 60px;
+  white-space: normal;
+}
+
+.toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #4d5df9;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle.active {
+  background: #ff4d89;
+  transition: 0.3s;
+}
+
+.toggle i {
+  position: relative;
+  color: #fff;
+  font-size: 25px;
+  display: none;
+  top: 3px;
+}
+
+.toggle .open i,
+.toggle.active .close i {
+  display: block;
+}
+
+.toggle .close i,
+.toggle.active .open i {
+  display: none;
+}
+
+.form-button {
+  position: fixed;
+  display: block;
+  height: max-content;
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  left: 360px;
+  top: 40%;
+  font-weight: 400;
+  background: #0d6efd;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+.form-button:active {
+  transform: scale(0.98);
+  border: 0;
+}
+
+form .checkbox {
+  padding: 20px 60px;
+  margin: auto;
+  border-color: #0b76ef;
+  
 }

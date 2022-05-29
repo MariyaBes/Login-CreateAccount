@@ -5,20 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/edit.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <title>Изменение данных</title>
 </head>
 <body>
+    <div class="navigator">
+        <ul>
+            <li class="list active">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon">
+                        <i class="fi fi-rr-home"></i>
+                    </span>
+                    <span class="title">Главная</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon">
+                        <i class="fi fi-rr-user"></i>
+                    </span>
+                    <span class="title">Профиль</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon">
+                        <i class="fi fi-rr-settings-sliders"></i>
+                    </span>
+                    <span class="title">Настройки</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="#">
+                    <span class="icon">
+                        <i class="fi fi-rr-sign-out"></i>
+                    </span>
+                    <span class="title">Выход</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="toggle">
+        <div class="open">
+            <i class="fi fi-br-menu-burger"></i>
+        </div>
+        <div class="close">
+            <i class="fi fi-br-cross"></i>
+        </div>
+    </div>
+
     <div class="container rounded bg-white mt-5 mb-5">
         <div class="row">
             <div class="col-md-3 border-right">
                 <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                    <image class="img" width="150px" src="./assets/photo3.png"></image>
-                        <span class="font-weight-bold">Мовсесгех</span><span class="text-black-50">ы@mail.ru</span><span> </span></div>
+                    <image class="img" width="200px" src="./assets/user.png"></image>
+                        <span class="font-weight-bold">Том</span><span class="text-black-50">tom@mail.ru</span><span> </span></div>
+                
             </div>
+            
             <div class="col-md-5 border-right">
                 <div class="p-3 py-5">
                     <div class="d-flex justify-content-between align-items-center mb-3">
@@ -28,7 +87,17 @@
                         <div class="col-md-6"><label class="labels">Имя</label><input type="text" class="form-control" value=""></div>
                         <div class="col-md-6"><label class="labels">Фамилия</label><input type="text" class="form-control" value=""></div>
                     </div>
-                    <div class="row mt-3">
+                    <form>
+                        <label class="checkbox">
+                          <input type="checkbox">
+                          Мужчина
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            Женщина
+                          </label>
+                      </form>
+                    <div class="row mt-0">
                         <div class="col-md-12"><label class="labels">Телефон</label><input type="text" class="form-control" placeholder="Введите номер телефона" value=""></div>
 
                         <div class="col-md-12"><label class="labels">Страна</label><input type="text" class="form-control" value=""></div>
@@ -46,54 +115,9 @@
                 </div>
             </div>
         </div>
-
-
-
-        <div class="navigator">
-            <ul>
-                <li class="list active">
-                    <a href="#">
-                        <span class="icon">
-                            <i class="fi fi-rr-home"></i>
-                        </span>
-                        <span class="title">Главная</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon">
-                            <i class="fi fi-rr-user"></i>
-                        </span>
-                        <span class="title">Профиль</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon">
-                            <i class="fi fi-rr-settings-sliders"></i>
-                        </span>
-                        <span class="title">Настройки</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon">
-                            <i class="fi fi-rr-sign-out"></i>
-                        </span>
-                        <span class="title">Выход</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <button class="form-button" type="submit">Выбрать изображение</button>
     
-        <div class="toggle">
-            <i class="fi fi-br-menu-burger"></i>
-        </div>
-    
-        <script src="./src/ed_prof.js">
-        </script>
-    </div>
-    </div>
-    </div>
+    <script src="./src/ed_prof.js"></script>
+
 </body>
 </html>

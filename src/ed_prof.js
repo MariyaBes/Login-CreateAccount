@@ -1,19 +1,17 @@
 let menuToggle = document.querySelector('.toggle');
-menuToggle.onclick = function()
-{
-    menuToggle.classList.toggle('active')
+let navigator = document.querySelector('.navigator')
+menuToggle.onclick = function(){
+  menuToggle.classList.toggle('active');
+  navigator.classList.toggle('active');
 }
 
 let list = document.querySelectorAll('.list');
-for (let i = 0; i<list.length; i++)
-{
-    list[i].onclick = function()
-    {
-        let j = 0;
-        while(j < list.length)
-        {
-            list[j++].className = 'list';
-        }
-        list[i].className = 'list active';
+for (let i = 0; i < list.length; i++) {
+  list[i].onclick = function() {
+    let j = 0;
+    while(j < list.length) {
+      list[j++].className = 'list';
     }
+    list[i].className = 'list active';
+  }
 }
