@@ -15,3 +15,10 @@ for (let i = 0; i < list.length; i++) {
     list[i].className = 'list active';
   }
 }
+
+const body = document.querySelector("body"),
+      modeToggle = body.querySelector(".mode-toggle");
+
+modeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark");
+});

@@ -7,9 +7,13 @@
   font-family: 'Roboto', sans-serif;
 }
 
-main {
+body {
   min-height: 100vh;
   background: #fff;
+}
+
+body.dark {
+  background: #3a3b3c;
 }
 
 .navigator {
@@ -157,8 +161,9 @@ main {
 .toggle i {
   position: relative;
   color: #fff;
-  font-size: 25px;
+  font-size: 26px;
   display: none;
+  justify-content: center;
   top: 3px;
 }
 
@@ -201,4 +206,51 @@ form .checkbox {
   margin: auto;
   border-color: #0b76ef;
   
+}
+
+.navigator .mode {
+  top: 300%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigator .mode {
+  display: flex;
+  align-items: center;
+}
+
+.navigator .mode-toggle {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  height: 50px;
+  min-width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mode .swicth {
+  position: relative;
+  display: inline-block;
+  height: 22px;
+  width: 40px;
+  border-radius: 25px;
+  background-color: #ddd;
+}
+
+.swicth::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
 }
