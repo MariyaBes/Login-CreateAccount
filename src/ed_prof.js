@@ -17,7 +17,7 @@ for (let i = 0; i < list.length; i++) {
 }
 
 const body = document.querySelector("body"),
-      modeToggle = body.querySelector(".mode-toggle");
+      modeToggle = body.querySelector(".mode");
 
 modeToggle.addEventListener("click", () => {
   body.classList.toggle("dark");
